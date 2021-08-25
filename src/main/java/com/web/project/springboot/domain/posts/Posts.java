@@ -3,18 +3,12 @@ package com.web.project.springboot.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Getter
 @NoArgsConstructor
-@EntityScan
+@Entity
 public class Posts {
 
     @Id
