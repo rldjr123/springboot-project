@@ -12,15 +12,17 @@ public class PostsSaveRequestDto {
     private String title;
     private String content;
     private String author;
+
     @Builder
-    public PostsSaveRequestDto(Long id, String title, String content, String author){
+    public PostsSaveRequestDto(Long id, String title, String content, String author) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.author = author;
     }
+
     //
-    public Posts toEntity(){
+    public Posts toEntity() {
         return Posts.builder()
                 .title(title)
                 .content(content)
