@@ -9,6 +9,7 @@
                 <a href="/logout" class="btn btn-info active" role="button">LogOut</a>
             {{/userName}}
             {{^userName}}
+                <!--소셜로그인연동 관련버튼-->
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
                 <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
             {{/userName}}
