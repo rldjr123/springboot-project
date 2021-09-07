@@ -26,6 +26,10 @@ public class indexController {
     public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
 
+        //@LoginUser 어노테이션으로 수정함, Session에 경우 많은메소드에서 호출할텐데 똑같은 코드가 반복될것이고 수정할사항이 생기면 찾아서 전부 수정해야함
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        
+        
         if(user != null){
             model.addAttribute("userName", user.getName());
         }

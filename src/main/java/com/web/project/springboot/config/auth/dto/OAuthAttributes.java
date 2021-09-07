@@ -56,7 +56,7 @@ public class OAuthAttributes {
                 .build();
     }
 
-
+    /*User엔티티를생성, 엔티티를 생성하는 시젖ㅁ은 처음가입할때 가입권한을 Guest로 설정*/
     public User toEntity(){
         return User.builder()
                 .name(name)

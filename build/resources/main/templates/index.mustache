@@ -9,7 +9,10 @@
                 <a href="/logout" class="btn btn-info active" role="button">LogOut</a>
             {{/userName}}
             {{^userName}}
+                <!--소셜로그인연동 관련버튼-->
+                <!--a href는 스프링 시큐리티에서 기본으로 제공하는 로그인 URL, 로그아웃과 더불어 별도로 Controller를 생성할필요없음-->
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                <!--a href주소는 application-oauth.properties에서 등록한 redirect-uri 값에 맞춰 자동등록, /oauth2/authrization/ 까지는 고저, 마지막 path만 각소셜로그인코드를 사용-->
                 <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
             {{/userName}}
 
