@@ -12,6 +12,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 import javax.servlet.http.HttpSession;
 
+//final필드 생성자 어노테이션
 @RequiredArgsConstructor
 @Component  //조건에 맞는 경우 메소드가 있다면 구현체가 지정한값으로 해당 메소드로 값을 넘김
 public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver {
