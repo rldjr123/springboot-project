@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 
                 /*antMatchers - 권한대상관리지정옵션, URL, HTTP메소드별로 관리가가능*/
-                .antMatchers("/","/css/**","/images/**","/js/**", "/h2-console/**", "/profile").permitAll()
+                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
                 .antMatchers("/api/v1/**").hasRole(Role.USER.name())
                 
                 /*설정된값들이외 나머지 url들을 나타냄,여기서는 authenticated을 추가하여 나머지 url들은 인증된 사용자만 허용하게함, 즉 로그인한사람 */
